@@ -1,0 +1,134 @@
+Requête SQL avec DBHelper
+
+db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+
+Méthodes disponibles :
+    void execSQL(...)
+
+    long insert(String table, String nullColumnHack, ContentValues values)
+        ContentValues values = new ContentValues();
+        values.put(“name”, “Cartman”);      //put(clé,valeur) avec la clé qui est le nom de la colonne
+        db.insert(“persons”, null, values);
+
+    int update((String table, ContentValues values, String whereClause, String[] whereArgs)
+        // UPDATE persons SET name="John" WHERE name="zozo" id > 3
+        ContentValues values = new ContentValues();
+        values.put("name", ”John"); //SET
+        String[] whereArgs = { "3", "zozo" };      // valeur du where
+        db.update(“persons”, values, "id>? and name=?", whereArgs); // decrit en plsu les conditions du where
+
+    int delete(String table, String whereClause, String[] whereArgs)
+        // DELETE persons WHERE id = 3
+        // même philosophie que le update
+        String[] whereArgs = { "3" };
+        db.delete("persons", "id=?", whereArgs);
+
+    Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy)
+        //select, idem que fetch_data avec pdo
+        String[] columns = { Person.ID, Persons.NAME };  // soit le numéro de la colonne, soit le nom de la colonne
+        // pour le nom de la colonne : passer de par les string static du mapping (par ex, col id : Quote.ID)
+        String[] params = { “Cartman” };
+        Cursor result = db.query(TABLE_NAME, columns, ”name=?", params, null, null, null, "1");
+
+        Méthodes du Cursor
+            getCount() : returns the number of rows
+            moveToFirst() : moves the cursor to the first row
+            moveToNext() : moves the cursor to the next line
+            isAfterLast() : returns true if the cursor position is after the last row
+            getColumnNames() : returns a string array holding the names of all of the columns in the result set
+            getColumnIndex(String name) : return the index of the corresponding column name
+
+        List<Person> persons = new ArrayList<Person>();
+
+        result.moveToFirst();   // mets toi à la première du résultat de la requête
+        while(!result.isAfterLast()) {  // tant qu'il existe une ligne dans le résultat de la rquête
+           Person person = new Person();
+           person.setId(result.getLong(0)); // pour récupérer la valeur du colonne : getTypeValeur(numColonne/nomColonne)
+           person.setName(result.getString(1));
+           persons.add(person);
+
+           result.moveToNext(); // va à la ligne suivante du résultat
+        }
+        result.close(); // ATTENTION PENSER A FERMER LE CURSOR QUAND ON A FINI DE RECUPERER LES RESULTATS
+
+API REST simple
+    Classe de référence (fournie Apache) : HTTPClient
+
+    Each request with HttpClient follows the steps above :
+        Create an instance of HttpClient class
+        Create an instance of HttpRequest
+        Configure properties of the request
+        Execute the request with the HttpClient instance
+        Analysis and processing of the response
+
+    GET
+        public String sendGetRequest(String address) {
+          String result = null;
+
+          try {
+            HttpClient httpClient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet();
+
+            URI uri = new URI("localhost...");
+            httpGet.setURI(uri);
+
+            HttpResponse response = httpClient.execute(httpGet);
+
+           result = EntityUtils.toString(response.getEntity()); // réponse sou forme de string
+
+          } catch (Exception e) {
+            Log.e(LOG_TAG, e.getMessage(), e);
+          }
+          return result;
+        }
+        public void sendPostRequest(String address, String entity) {
+          try {
+            HttpClient httpClient = new DefaultHttpClient();
+            HttpGet post = new HttpPost();
+
+            URI uri = new URI(address);
+            post.setURI(uri);
+            post.setEntity(new StringEntity(entity));
+
+            httpClient.execute(post);
+
+          } catch (Exception e) {
+            Log.e(LOG_TAG, e.getMessage(), e);
+          }
+        }
+
+        Format de données : JSON
+        public JSONObject convertToJson(Student student) throws JSONException {
+
+        	JSONObject jsonStudent = new JSONObject();
+
+        	jsonStudent.put(ID_FIELD, student.getId());
+        	jsonStudent.put(FIRST_NAME_FIELD, student.getFirstName());
+        	jsonStudent.put(LAST_NAME_FIELD,student.getLastName());
+        	jsonStudent.put(BIRTH_DATE_FIELD, dateFormat.format(student.getBirthDate()));
+
+        	return jsonStudent;
+        }
+
+        public Student convertToStudent(JSONObject object) throws JSONException {
+          Student student = new Student();
+
+          student.setId(object.getLong(ID_FIELD));
+          student.setFirstName(object.getString(FIRST_NAME_FIELD));
+          student.setLastName(object.getString(LAST_NAME_FIELD));
+          String formatedDate = object.getString(BIRTH_DATE_FIELD);
+
+          try {
+            student.setBirthDate(dateFormat.parse(formatedDate));
+          } catch (ParseException e) {
+            Log.e(LOG_TAG, "Parse Exception!", e);
+          }
+
+          return student;
+        }
+
+
+
+
+
+

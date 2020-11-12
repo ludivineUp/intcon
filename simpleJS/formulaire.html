@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN“
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+<head>
+		<title>Formation Javascript - Formulaire</title>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<div  id="header">
+			<div id="menu">
+				<ul>
+				<li><a href="formulaire.html">Formulaire</a></li>
+				<li><a href="index.html">Index</a></li>
+			</ul>
+			</div>
+		</div>
+		<form name="formulaire" method="POST" action="" onsubmit="return valideLangue()">
+			<label for="firstname" >Prenom</label>
+			<input type="text" id="firstname" required onblur="valideNom(this)"/></br>
+			<label for="lastname">Nom</label>
+			<input type="text" id="lastname" required onblur="valideNom(this)"/></br>
+			<label for="email">E-mail</label>
+			<input type="text" id="mail"  required onblur="valideMail(this)"/></br>
+			<label for="pass">Password</label>
+			<input type="password" id="pass" required onblur="validePass(this)"/></br>
+			<label for="naissance">Date de naissance</label>
+			<input type="text" id="naissance" required onblur="valideDate(this)"/></br>
+			<label for="codepostal">Code postal</label>
+			<input type="text" id="codepostal" required onblur="valideCodePostal(this)"/></br>
+			<label for="tel">Telephone</label>
+			<input type="text" id="tel" required onblur="valideTel(this)"/></br>
+			<label for="url">Site personnel</label>
+			<input type="text" id="url" required onblur="valideUrl(this)"/></br>
+			<fieldset>
+				<legend>Langues</legend>
+					<input type="checkbox" id="ang" />Anglais</br>
+					<input type="checkbox" id="fr" />Francais</br>
+			</fieldset>
+			<textarea  cols="25" rows="10" name="comments" id="comments">
+          		Vos commentaires.
+			</textarea>
+			</br>
+			<input type="submit" value="Validation"/> 
+			<input  type="reset" value="Tout supprimer"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Deviner une chiffre</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			// le chiffre à deviner
+			var egnime = Math.round(Math.random()*10);
+			console.log(egnime);
+			var essai = 1;
+
+			// on demande a l utilisateur de donner son chiffre
+			var resultat;
+			// regex pour déterminer un chiffre
+			var reg = /\d{1,2}/;
+			do{
+				do{
+					resultat = prompt("Entrer d'entrer un chiffre entre 1 et 10");
+				}while(!reg.test(resultat));
+
+				if(egnime == resultat){
+					alert("Trouvé");
+				}
+				else{
+					alert("Perdu");
+				}
+				essai++;
+			}while(essai < 4 && egnime != resultat);
+
+
+		</script>
+	</body>
+</html>

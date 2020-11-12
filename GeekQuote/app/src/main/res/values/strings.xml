@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GeekQuote</string>
+    <string-array name="ex_qotes">
+        <item>RTFM</item>
+        <item>42</item>
+        <item>Dans le doute redemarre</item>
+        <item> Alt F4</item>
+        <item>Putain le cache merde j\'ai oublie</item>
+    </string-array>
+    <string name="btnsave">Enregistrer</string>
+    <string name="quote_invit">Ajouter une citation</string>
+</resources>

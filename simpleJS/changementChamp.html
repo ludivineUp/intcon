@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Modification champs</title>
+		<script type="text/javascript" src="script.js">
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<form id="calculatrice" method="POST" action="">
+				<label for="poucent">Pourcentage :</label>
+				<input type="text" id="poucent" onfocus="transformePourcent(this,true);gauche(this);" 
+				onblur="transformePourcent(this,false);centre(this);"/>
+				<br/>
+				<label for="date">Date :</label>
+				<input type="text" id="date" onfocus="gauche(this);" 
+				onblur="transformeDate(this);centre(this);"/>
+			</form>
+		</div>
+		
+	</body>
+</html>

@@ -8,7 +8,7 @@ Analyser le code dans simpleJS. Modifier le script pour faire au moins sept test
 
 TESTS D INTEGRATION
 Faire les tests d'intégration nécessaires dans GeekQuote.
-Faire les tests d'intégration nécessaires dans appNode.
+Faire les tests d'intégration nécessaires dans appNode avec Jasmine.
 
 TEST e2e
 Faire les tests e2e nécessaires desn GeekQuote.

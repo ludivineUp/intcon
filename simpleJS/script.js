@@ -497,7 +497,7 @@ function membre(id, nom){
 				}
 			}
 // fonction pour créerun objet équipe
-function equipe(nom){
+export function equipe(nom){
 				this.nom = nom;
 				this.membres = new Array();
 				this.toString = function(){

@@ -1,0 +1,15 @@
+GIT
+
+Faire les challenges sur  http:// learngitbranching.js.org/
+
+TESTS UNITAIRES
+Faire les tests unitaires nécessaires dans GeekQuote.
+Analyser le code dans simpleJS. Modifier le script pour faire au moins sept tests unitaires.
+
+TESTS D INTEGRATION
+Faire les tests d'intégration nécessaires dans GeekQuote.
+Faire les tests d'intégration nécessaires dans appNode.
+
+TEST e2e
+Faire les tests e2e nécessaires desn GeekQuote.
+Modifier appNode pour mettre un menu et faire les tests e2e nécessaires.

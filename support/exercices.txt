@@ -4,7 +4,7 @@ Faire les challenges sur  http:// learngitbranching.js.org/
 
 TESTS UNITAIRES
 Faire les tests unitaires nécessaires dans GeekQuote.
-Analyser le code dans simpleJS. Modifier le script pour faire au moins sept tests unitaires.
+Analyser le code dans simpleJS. Modifier le script pour faire au moins cinq tests unitaires.
 
 TESTS D INTEGRATION
 Faire les tests d'intégration nécessaires dans GeekQuote.

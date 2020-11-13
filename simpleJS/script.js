@@ -487,6 +487,7 @@ function disparaitOuApparait(id,bouton){
 		efface = true;
 	}
 }
+// Test : vérifier la création d'un membre et la méthode toString
 function membre(id, nom){
 				// pour dire que c'est un objet : this = objet courant
 				this.id = id

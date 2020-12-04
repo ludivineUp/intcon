@@ -497,17 +497,17 @@ function membre(id, nom){
 				}
 			}
 // fonction pour créerun objet équipe
-export function equipe(nom){
-				this.nom = nom;
-				this.membres = new Array();
-				this.toString = function(){
-					var str = "Equipe : "+ this.nom+ " / ";
-					for(i = 0; i < this.membres.length; i++){
-						str += this.membres[i].toString() + " / ";
+	export function equipe(nom){
+					this.nom = nom;
+					this.membres = new Array();
+					this.toString = function(){
+						var str = "Equipe : "+ this.nom+ " / ";
+						for(i = 0; i < this.membres.length; i++){
+							str += this.membres[i].toString() + " / ";
+						}
+						return str;
 					}
-					return str;
 				}
-			}
 
 function createEquipe(){
 

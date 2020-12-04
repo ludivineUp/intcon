@@ -1,0 +1,71 @@
+C# VB.NET,langage officiel de Microsoft
+	C# pour les dev, VB pour les non dev
+	F# ne me demander ce qu'il fait
+	DOT.NET l'ensemble des méthodes pour tous les lg de Microsoft
+	Mobile Xamarin
+	Web ASP et MVC super facile
+	C# est une pale copie de Java/JEE
+	WPF pour les application Desktop (excellente librairie)
+	Septeo (logiciels notaires) : uniquement avec C#
+	application Windows, applications Web où l'infra = Azure
+Java JEE
+	Servlet (PHP simple), JSF (php évolué, angular and co), Spring, EJB
+	Base : langage pour le Web, systèmes embarqués, info distribué
+	Premier lg objet évolué, premier qui a intégré les collections en 2002
+	Swing / JavaFX: application Desktop (c'est de la merde)
+	Embarqué : Android et Solaris
+	Depuis 2011, rachété par Oracle et Oracle fait de la merde avec (Sun)
+	PME/ Grosse entreprise : hébergement serveur web Java onéreux
+	Perf : largement plus performant que PhP et plus large, plus grande multitude de fonctionnalité
+	Business : télévision, streaming, banque, spatial, assurances
+Python
+	Mathématiques
+	Rapidité pour les maths
+	Web : django, flask Backoffice admin est intégré
+	Desktop (merde) : Tkinter (ignoble), dédié pour les jeux
+	IA : syntaxe simple, portable, pas de pb juridique
+	Problème du multithreading de base
+	Maintenu par les universités publiques
+	Business : cartographie (lien très facile avec Qt)
+PhP
+	Web, un des meilleurs lg pour le Web
+	Merde pour les calculs de masse
+	Magento pour les grosses boutiques en ligne
+	Problème du multithreading
+	Pas d'appli qui va analyser en temps réel les tendances des réseaux sociaux
+JS TS
+	Uniquement pour manipuler le front dom, bom
+	Défaut : caculs des arrondis, il n'a pas de cache
+	TS le seul langage/surcouche qui est accepté par Microsoft et Google, génère du bon JS
+Rust
+	Admin réseau/infra
+	ancêtre : Perl (le lg le plus puissant sur les string)
+Ruby
+	Web, je connais pas plus
+	web débutant
+C++ C
+	Application Desktop, batch, calculs
+	Y a pas plus performant mais y pas plus casse gueule
+	Web mobile : Qt (excellent), ca vient de nokia
+	Cartographie, IA, aéronautique, médical
+iOS / Swift
+	langage particulier, dédié iOS/Mac os
+	vient de l'objectiveC
+	manque cruel de développeurs
+	besoin d'un mac pour compiler
+Ada
+	Vieux langage le plus stable aujourd'hui
+	Défense, nucléaire
+Go
+	Pour les débiles
+	"les jeunes développeur ont un énorme potentiel mais ne savent l'exploiter, donc le langage doit
+	le faire pour eux"
+Kotlin
+	Résolution d'un problème juridique
+	Non respect absolu des règles de le programmation orientée objet
+	Syntaxe est super simple
+Cobol
+	Un des premiers langage de programmation pour des logiciels
+	Domaine : banque
+	Syntaxe C, langage strict (ex: nb carac max par lines), très limité par le langage
+	salaire > 50k
